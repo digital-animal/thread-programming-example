@@ -10,9 +10,15 @@ public class TextParserTest {
 		
 		MyThread1 t1 = new MyThread1(textParser, line1);
 		// MyThread1 t2 = new MyThread1(textParser, line2); // convenient, DRY followed
-		MyThread2 t2 = new MyThread2(textParser, line2); // not convenitent, why make two thread class with exactly smae signature?
+		MyThread2 t2 = new MyThread2(textParser, line2); // not convenitent, why make two thread class with exactly same signature?
 
 		t1.start();
 		t2.start();
+
+		try {
+            t1.join();
+            t2.join();
+        } catch (InterruptedException e) {}
+        
 	}
 }

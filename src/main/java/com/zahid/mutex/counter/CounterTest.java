@@ -2,7 +2,7 @@ package com.zahid.mutex.counter;
 
 public class CounterTest {
     public static void main(String[] args) {
-        Counter counter = new Counter();
+        Counter counter = new Counter(); // shared object
 
         Thread incrementThread = new Thread(() -> {
             for (int i = 0; i < Integer.MAX_VALUE; i++) {

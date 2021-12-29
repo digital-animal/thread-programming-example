@@ -23,13 +23,13 @@ public class DeadlockTest {
         runningThread.start();
         walkingThread.start();
 
-        /* sleep(5000);
-        Thread.interrupted(); */
+        // sleep(5000);
+        // Thread.interrupted();
 
-        /* try {
+        try {
             runningThread.join();
             walkingThread.join();
-        } catch (InterruptedException e) {} */
+        } catch (InterruptedException e) {}
     }
 
     public static void sleep() {

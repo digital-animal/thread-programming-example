@@ -25,12 +25,12 @@ public class ThreadMethodTest2 {
 		// }
 		
 		// # Main Thread, join
-		Thread mainThread = Thread.currentThread();
-		try {
-			mainThread.join();
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+		// Thread mainThread = Thread.currentThread();
+		// try {
+		// 	mainThread.join(); // can main thread wait for main thread to finish? fishy! check later..
+		// } catch (InterruptedException e) {
+		// 	e.printStackTrace();
+		// }
 		
 		// # Main Thread, yield
 		int count = 1;

@@ -2,7 +2,7 @@ package com.zahid.mutex.counter;
 
 public class Counter {
     private final Object lock = new Object(); // explicit lock object
-    private int count;
+    private int count; // shard data among threads
     
     public Counter() {
         count = 0;
@@ -27,7 +27,7 @@ public class Counter {
     }
 
     // public void decremet() { // no lock i.e. no synchronization
-    //     count++;
+    //     count--;
     // }
 
     public void decremet() { // explicit lock object, but costly

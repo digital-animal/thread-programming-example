@@ -21,7 +21,7 @@ public class DiningPhilosopherTest {
             Lock rightFork = forkList[(i + 1) % forkList.length];
 
             philosopherList[i] = new Philosopher("Philosopher" + (i+1), leftFork, rightFork);
-            executorService.execute(philosopherList[i]);
+            executorService.execute(philosopherList[i]); // thread.start() + thread.join() equivalent
         }
 
         executorService.shutdown();

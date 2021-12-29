@@ -7,7 +7,8 @@ public class Printer {
         String personName = person.getName();
 
         System.out.println("# " + personName + " started printing..");
-        for(int i=1; i<=person.getTotalPages(); i++) {
+        int totalPages = person.getTotalPages();
+        for(int i=1; i<=totalPages; i++) {
             System.out.println("=> printed page #" + i + " for " + personName);
             // sleep(100);
             sleep(400);

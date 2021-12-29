@@ -7,7 +7,7 @@ public class IntrinsicLockingBuffer {
     private static final int N = 10;
     private Queue<Integer> queue = new LinkedList<>();
 
-    public synchronized void addItem(int item) {
+    public synchronized void addItem(int item) { // producer adds to queue
         while (queue.size() == N) {
             try { wait();}
             catch (InterruptedException e) {}
@@ -17,7 +17,7 @@ public class IntrinsicLockingBuffer {
         notifyAll();
     }
 
-    public synchronized Integer getItem() {
+    public synchronized Integer getItem() { // consumer consumes from queue
         while (queue.isEmpty()) {
             try { wait();}
             catch (InterruptedException e) {}

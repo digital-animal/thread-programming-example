@@ -25,9 +25,9 @@ public class Philosopher extends Thread {
     public void run() {
         while(true) {
             think();
-            synchronized(leftFork) { // acquiring left fork
+            synchronized(leftFork) { // acquiring left fork i.e. lock
                 System.out.printf("[%s] %s acquired left fork\n", Thread.currentThread().getName(), name);
-                synchronized(rightFork) { // acquiring right fork
+                synchronized(rightFork) { // acquiring right fork i.e. double lock
                     System.out.printf("[%s] %s acquired right fork\n", Thread.currentThread().getName(), name);
                     eat();
                     System.out.printf("[%s] %s releasing right fork\n", Thread.currentThread().getName(), name);

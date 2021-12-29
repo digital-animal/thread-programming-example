@@ -26,8 +26,11 @@ public class ThreadInterruptExample {
             }
         });
         t1.start();
+        
+        try { t1.join();} 
+        catch (InterruptedException e1) {}
 
-        try { Thread.sleep(TimeUnit.SECONDS.toMillis(10));} 
+        try { Thread.sleep(TimeUnit.SECONDS.toMillis(10));} // sleeping main thread
         catch (InterruptedException e) {}
 
         // t1.stop(); // never recommended

@@ -30,6 +30,11 @@ public class BufferTest {
 
         producer.start();
         consumer.start();
+
+        try {
+            producer.join();
+            consumer.join();
+        } catch (InterruptedException e) {}
     }
 
     public static void sleep() {

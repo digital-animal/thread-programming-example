@@ -25,6 +25,11 @@ public class ProducerConsumerTest {
 
         producerThread.start();
         consumerThread.start();
+
+        try {
+            producerThread.join();
+            consumerThread.join();
+        } catch (InterruptedException e) {}
     }
 
     public static void sleep() {

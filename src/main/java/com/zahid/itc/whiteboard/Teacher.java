@@ -28,7 +28,8 @@ public class Teacher extends Thread {
 			message = messagList.get(i);
 			wb.writeTextOnWhiteBoard(message);
 			System.out.printf("\n# TEACHER has written `%s`\n", message);
-			try { Thread.sleep(1000);
+
+			try { Thread.sleep(1000);  // doesn't work properly without sleep. check later
 			} catch (InterruptedException e) {}
 		}
 	}

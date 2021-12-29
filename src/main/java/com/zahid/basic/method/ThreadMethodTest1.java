@@ -4,11 +4,11 @@ public class ThreadMethodTest1 {
 
 	public static void main(String[] args) {
 		// # Thread 1
-		Thread t1 = new Thread();
+		// Thread t1 = new Thread();
 		// Thread t1 = new Thread("My Thread");
 		// Thread t1 = new Thread(new MyRunnable(), "My Runnable");
 		// MyThread t1 = new MyThread();
-		// MyThread t1 = new MyThread("My Thread 1");
+		MyThread t1 = new MyThread("My Thread 1");
 		
 		System.out.println("ID = " + t1.getId());
 		System.out.println("Name = " + t1.getName());

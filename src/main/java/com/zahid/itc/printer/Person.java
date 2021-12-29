@@ -3,7 +3,7 @@ package com.zahid.itc.printer;
 import lombok.Data;
 
 @Data
-public class Person implements Runnable{
+public class Person implements Runnable {
     private String name;
     private int totalPages;
     private Printer printer;

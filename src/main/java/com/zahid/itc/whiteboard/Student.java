@@ -10,7 +10,7 @@ public class Student extends Thread {
 		this.name = name;
 		this.wb = wb;
 		id = ++count;
-		wb.giveAttendance();
+		wb.giveAttendance(); // alike atm.register()
 	}
 
 	@Override
@@ -23,7 +23,7 @@ public class Student extends Thread {
 			System.out.flush();
 			if(text.equals("end")) break;
 
-			try { Thread.sleep(200);
+			try { Thread.sleep(200); // doesn't work properly without sleep. check later
 			} catch (InterruptedException e) {}
 		}
 	}

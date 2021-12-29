@@ -21,6 +21,16 @@ public class WhiteBoardTest {
 		s4.start();
 		s5.start();
 
+		try { 
+            t1.join();
+            s1.join();
+            s2.join();
+            s3.join();
+            s4.join();
+            s5.join();
+        } catch (InterruptedException e) {}
+
+
 	}
 
 }

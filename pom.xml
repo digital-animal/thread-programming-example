@@ -38,9 +38,9 @@
               <!-- <mainClass>com.zahid.basic.racecondition.RaceConditionTest1</mainClass> -->
               <!-- <mainClass>com.zahid.basic.racecondition.RaceConditionTest2</mainClass> -->
 
-              <!-- <mainClass>com.zahid.mutex.counter.CounterTest</mainClass>
-              <mainClass>com.zahid.mutex.parser.TextParserTest</mainClass>
-              <mainClass>com.zahid.mutex.atm.TestingATM</mainClass> -->
+              <!-- <mainClass>com.zahid.mutex.counter.CounterTest</mainClass> -->
+              <!-- <mainClass>com.zahid.mutex.parser.TextParserTest</mainClass> -->
+              <!-- <mainClass>com.zahid.mutex.atm.TestingATM</mainClass> -->
 
               <!-- <mainClass>com.zahid.deadlock.runandwalk.DeadlockTest</mainClass> -->
               <!-- <mainClass>com.zahid.deadlock.diningphilosopher1.DiningTable</mainClass> -->

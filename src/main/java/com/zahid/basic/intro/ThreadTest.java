@@ -23,6 +23,14 @@ public class ThreadTest {
         t3.start();
         t4.start();
 
+        // waits for other thread to finish and then main finishes executing
+        try { 
+            t1.join();
+            t2.join();
+            t3.join();
+            t4.join();
+        } catch (InterruptedException e) {}
+
         for(int i=0; i<100; i++) { // loop inside main thread
             System.out.println("Main: " + i);
         }
